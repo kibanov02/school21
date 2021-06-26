@@ -14,8 +14,8 @@
 #include <unistd.h>
 int main()
 {
-	char a[5] = {'o', 'o', 'o', 'o', '\0'};
-	char b[4] = {'s' ,'r', 'c', '\0'};
+    char a[] = "oooo";
+	char b[] = "src1";
 	ft_strcpy(a, b);
 	int	i = 0;
 	while (a[i] != '\0')
@@ -24,8 +24,8 @@ int main()
 	printf("\n");
 	printf("\n");
 
-	char a1[4] = {'1', '1', '1', '\0'};
-	char b1[5] = {'2', '2', '2', '2', '\0'};
+	char a1[4] = "111";
+	char b1[5] = "2222";
 	ft_strncpy(a1, b1, 5);
 	i = 0;
 	while (a1[i] != '\0')
@@ -80,7 +80,7 @@ int main()
     printf("\n");
      printf("\n");
         
-     char ex09[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+     char ex09[] = "salut, comment tu vas ? 42Mots quarante-deux; cinquante+et+un";
      char* a9 = ft_strcapitalize(ex09);
      write(1, a9, 61);
     
