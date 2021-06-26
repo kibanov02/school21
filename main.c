@@ -8,6 +8,8 @@
 #include "./ex07/ft_strupcase.c"
 #include "./ex08/ft_strlowcase.c"
 #include "./ex09/ft_strcapitalize.c"
+#include "./ex10/ft_strlcpy.c"
+#include "./ex11/ft_putstr_non_printable.c"
 #include <stdio.h>
 #include <unistd.h>
 int main()
@@ -81,4 +83,19 @@ int main()
      char ex09[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
      char* a9 = ft_strcapitalize(ex09);
      write(1, a9, 61);
+    
+    printf("\n");
+    printf("\n");
+       
+    char a10[] = "zzzzzzzzzz";
+    char b10[] = "hello";
+    int i10 = ft_strlcpy(a10, b10, 5);
+    printf("%d\n", i10);
+    write(1, a10, 6);
+    
+    printf("\n");
+    printf("\n");
+    
+    char a11[] = "Coucou\ntu vas bien ?";
+    ft_putstr_non_printable(a11);
 }
