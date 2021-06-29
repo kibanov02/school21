@@ -34,19 +34,19 @@ int main()
     
     printf("test 1\n");
     char a01[] = "zzzzz";
-    printf("answer should be = zzzzz\nyour answer is: ");
+    printf("answer should be = zzzzz\nyour answer is: \n");
     ft_putstr(a01);
     printf("\n\n");
     
     printf("test 2\n");
     char a01_1[] = "";
-    printf("answer should be = \nyour answer is: ");
+    printf("answer should be = \nyour answer is: \n");
     ft_putstr(a01_1);
     printf("\n\n");
    
     printf("test 3\n");
     char a01_2[] = "aaa\0aa";
-    printf("answer should be = aaa\nyour answer is: ");
+    printf("answer should be = aaa\nyour answer is: \n");
     ft_putstr(a01_2);
     printf("\n\n");
 
@@ -81,5 +81,77 @@ int main()
     int i02_4 = -2147483648;
     printf("answer should be = -2147483648\nyour answer is: ");
     printf("%d",  i02_4);
+    printf("\n\n");
+
+    //ex03
+    printf("****ex03****\n");
+    
+    printf("test 1\n");
+    char a03[] = "asfasfas";
+    printf("answer should be = 0\nyour answer is: ");
+    printf("%d", ft_atoi(a03));
+    printf("\n\n");
+    
+    printf("test 2\n");
+    char a03_1[] = "\n\n\n\n\n\t\t\t\t\t++---+++--";
+    printf("answer should be = 0\nyour answer is: ");
+    printf("%d", ft_atoi(a03_1));
+    printf("\n\n");
+   
+    printf("test 3\n");
+    char a03_2[] = "    +-+-++--++--2147483647";
+    printf("answer should be = 2147483647\nyour answer is: ");
+    printf("%d", ft_atoi(a03_2));
+    printf("\n\n");
+
+    printf("test 4\n");
+    char a03_3[] = "-2147483648";
+    printf("answer should be = -2147483648\nyour answer is: ");
+    printf("%d", ft_atoi(a03_3));
+    printf("\n\n");
+
+    printf("test 5\n");
+    char a03_4[] = "      ----------++++++++50";
+    printf("answer should be = 50\nyour answer is: ");
+    printf("%d", ft_atoi(a03_4));
+    printf("\n\n");
+
+    //ex04
+    printf("****ex04****\n");
+    
+    printf("test 1\n");
+    char a04[] = "qwerty";
+    printf("answer should be = wrwr\nyour answer is: \n");
+    ft_putnbr_base(333, a04);
+    printf("\n\n");
+
+    printf("test 2\n");
+    char a04_1[] = "q";
+    printf("answer should be = \nyour answer is: \n");
+    ft_putnbr_base(333, a04_1);
+    printf("\n\n");
+
+    printf("test 3\n");
+    char a04_2[] = "./']";
+    printf("answer should be = //\nyour answer is: \n");
+    ft_putnbr_base(5, a04_2);
+    printf("\n\n");
+
+    printf("test 4\n");
+    char a04_3[] = "qwerty-";
+    printf("answer should be = \nyour answer is: \n");
+    ft_putnbr_base(333, a04_3);
+    printf("\n\n");
+
+    printf("test 5\n");
+    char a04_4[] = "qwertyq";
+    printf("answer should be = \nyour answer is: \n");
+    ft_putnbr_base(333, a04_4);
+    printf("\n\n");
+
+    printf("test 6\n");
+    char a04_5[] = "q\nerty";
+    printf("answer should be = \nyour answer is: \n");
+    ft_putnbr_base(333, a04_5);
     printf("\n\n");
 }
