@@ -154,4 +154,49 @@ int main()
     printf("answer should be = \nyour answer is: \n");
     ft_putnbr_base(333, a04_5);
     printf("\n\n");
+
+    //ex05
+    printf("****ex05****\n");
+    
+    printf("test 1\n");
+    char a05[] = "wrwr";
+    char b05[] = "qwerty";
+    printf("answer should be = 333\nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05, b05));
+    printf("\n\n");
+
+    printf("test 2\n");
+    char a05_1[] = "q";
+    char b05_1[] = "qwert";
+    printf("answer should be = 0\nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05_1, b05_1));
+    printf("\n\n");
+
+    printf("test 3\n");
+    char a05_2[] = "        --+--wrw r";
+    char b05_2[] = "qwerty";
+    printf("answer should be = \nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05_2, b05_2));
+    printf("\n\n");
+
+    printf("test 4\n");
+    char a05_3[] = "  \n \r t";
+    char b05_3[] = "qwerty";
+    printf("answer should be = 4\nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05_3, b05_3));
+    printf("\n\n");
+
+    printf("test 5\n");
+    char a05_4[] = "w qweqwrqwe";
+    char b05_4[] = "qwerty";
+    printf("answer should be = 1\nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05_4, b05_4));
+    printf("\n\n");
+
+    printf("test 6\n");
+    char a05_5[] = "     \t -+-+ wrwr";
+    char b05_5[] = "qwerty";
+    printf("answer should be = 0\nyour answer is: \n");
+    printf("%d", ft_atoi_base(a05_5, b05_5));
+    printf("\n\n");
 }
