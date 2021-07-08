@@ -1,3 +1,4 @@
+#include "../ex00/ft_create_elem.c"
 #include "../ex06/ft_list_clear.c"
 #include "../ex05/ft_list_push_strs.c"
 

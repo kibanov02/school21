@@ -1,4 +1,6 @@
+#include "../ex00/ft_create_elem.c"
 #include "../ex04/ft_list_push_back.c"
+#include "../ex03/ft_list_last.c"
 #include <stdio.h>
 
 int	main(void)
