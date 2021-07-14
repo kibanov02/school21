@@ -36,15 +36,16 @@ int	*fill_map_and_mtx(int fd, int **mtx, int *n_and_symbols, int m)
 					&& ch != n_and_symbols[3]))
 				return (0);
 			if ((i[0] == 0 || i[1] == 0) && ch != n_and_symbols[2])
-				mtx[i[0]][i[1]] = 1;
+				mtx[i[0] % 2][i[1]] = 1;
 			else if (ch == n_and_symbols[2])
-				mtx[i[0]][i[1]] = 0;
+				mtx[i[0] % 2][i[1]] = 0;
 			else
-				mtx[i[0]][i[1]] = ft_min(mtx[i[0] - 1][i[1]],
-						mtx[i[0]][i[1] - 1], mtx[i[0] - 1][i[1] - 1]) + 1;
-			if (mtx[i[0]][i[1]] > max[0])
+				mtx[i[0] % 2][i[1]] = ft_min(mtx[(i[0] - 1) % 2][i[1]],
+						mtx[i[0] % 2][i[1] - 1],
+						mtx[(i[0] - 1) % 2][i[1] - 1]) + 1;
+			if (mtx[i[0] % 2][i[1]] > max[0])
 			{
-				max[0] = mtx[i[0]][i[1]];
+				max[0] = mtx[i[0] % 2][i[1]];
 				max[1] = i[0];
 				max[2] = i[1];
 			}

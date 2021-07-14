@@ -42,7 +42,6 @@ int	*get_n(int fd)
 			return (0);
 		n = 10 * n + (buf[0] - '0');
 	}
-	
 	if (check_and_make_res_buf(n, res_buf, buf) == 0)
 		return (0);
 	return (res_buf);

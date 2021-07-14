@@ -12,7 +12,7 @@ int	file_input(char *filename, int fd)
 	if (n_and_symbols == 0 || m == 0)
 		return (1);
 	close(fd);
-	mtx = create_mtx(n_and_symbols[0], m);
+	mtx = create_mtx(m);
 	fd = open(filename, O_RDONLY);
 	max = fill_map_and_mtx(fd, mtx, n_and_symbols, m);
 	if (max == 0)
@@ -25,7 +25,7 @@ int	file_input(char *filename, int fd)
 	close(fd);
 	free(max);
 	free(n_and_symbols);
-	free_mtx(mtx, n_and_symbols[0]);
+	free_mtx(mtx);
 	return (0);
 }
 
@@ -35,6 +35,7 @@ void	standart_input(void)
 
 	no_file();
 	fd = open("map", O_RDONLY);
+	write(1, "\n", 1);
 	file_input("map", fd);
 }
 
